@@ -20,9 +20,9 @@ if __name__ == '__main__':
     # read_csv returns DataFrame or TextParser
     # http://pandas.pydata.org/pandas-docs/stable/api.html#dataframe
     # DataFrame: 2D, size-mutable, potentially heterogeneous, has labeled axes rows and columns
-    train = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', 'labeledTrainData.tsv'), header=0, \
+    train = pd.read_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', 'labeledTrainData.tsv'), header=0, \
                     delimiter="\t", quoting=3)
-    test = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', 'testData.tsv'), header=0, delimiter="\t", \
+    test = pd.read_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', 'testData.tsv'), header=0, delimiter="\t", \
                    quoting=3 )
 
     print 'The first review is:'
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     raw_input("Press Enter to continue...")
 
     print 'Download text data sets. If you already have NLTK datasets downloaded, just close the Python download window...'
-    nltk.download()  # Download text data sets, including stop words
+    # nltk.download()  # Download text data sets, including stop words
 
     # Initialize an empty list to hold the clean reviews
     clean_train_reviews = []
@@ -103,6 +103,6 @@ if __name__ == '__main__':
     output = pd.DataFrame( data={"id":test["id"], "sentiment":result} )
 
     # Use pandas to write the comma-separated output file
-    output.to_csv(os.path.join(os.path.dirname(__file__), 'data', 'Bag_of_Words_model.csv'), index=False, quoting=3)
+    output.to_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', 'Bag_of_Words_model.csv'), index=False, quoting=3)
     print "Wrote results to Bag_of_Words_model.csv"
 
