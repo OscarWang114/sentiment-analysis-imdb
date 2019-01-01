@@ -15,8 +15,10 @@ import nltk.data
 import logging
 import numpy as np  # Make sure that numpy is imported
 from gensim.models import Word2Vec
+import fastText
+
 from sklearn.ensemble import RandomForestClassifier
-from KaggleWord2VecUtility import KaggleWord2VecUtility
+from Utility import Utility
 
 
 # ****** Define functions to create average word vectors
@@ -76,7 +78,7 @@ def getAvgFeatureVecs(reviews, model, num_features):
 def getCleanReviews(reviews):
     clean_reviews = []
     for review in reviews["review"]:
-        clean_reviews.append(KaggleWord2VecUtility.review_to_wordlist(review, remove_stopwords=True))
+        clean_reviews.append(Utility.review_to_wordlist(review, remove_stopwords=True))
     return clean_reviews
 
 
@@ -106,11 +108,11 @@ if __name__ == '__main__':
 
     print "Parsing sentences from training set"
     for review in train["review"]:
-        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer, remove_numbers=False)
+        sentences += Utility.review_to_sentences(review, tokenizer, remove_numbers=False)
 
     print "Parsing sentences from unlabeled set"
     for review in unlabeled_train["review"]:
-        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer, remove_numbers=False)
+        sentences += Utility.review_to_sentences(review, tokenizer, remove_numbers=False)
 
     # ****** Set parameters and train the word2vec model
     #
@@ -129,9 +131,9 @@ if __name__ == '__main__':
 
     # Initialize and train the model (this will take some time)
     print "Training Word2Vec model..."
-    model = Word2Vec(sentences, workers=num_workers, \
-                     size=num_features, min_count=min_word_count, \
-                     window=context, sample=downsampling, seed=1)
+    # model = Word2Vec(sentences, workers=num_workers, \
+    #                  size=num_features, min_count=min_word_count, \
+    #                  window=context, sample=downsampling, seed=1)
 
     # If you don't plan to train the model any further, calling
     # init_sims will make the model much more memory-efficient.
