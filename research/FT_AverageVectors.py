@@ -119,5 +119,5 @@ if __name__ == '__main__':
 
     # Write the test results
     output = pd.DataFrame(data={"id": test["id"], "sentiment": result})
-    output.to_csv(os.path.join(os.path.dirname(__file__), '../', 'output', "FastTextWordEmbed_AverageVectors.csv"), index=False, quoting=3)
-    print "Wrote FastTextWordEmbed_AverageVectors.csv"
+    output.to_csv(os.path.join(os.path.dirname(__file__), '../', 'output', "FT_AverageVectors.csv"), index=False, quoting=3)
+    print "Wrote FT_AverageVectors.csv"
