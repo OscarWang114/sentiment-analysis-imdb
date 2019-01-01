@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 
 
-class KaggleWord2VecUtility(object):
+class Utility(object):
     """KaggleWord2VecUtility is a utility class for processing raw HTML text into segments for further learning"""
 
     @staticmethod
@@ -59,8 +59,8 @@ class KaggleWord2VecUtility(object):
             # If a sentence is empty, skip it
             if len(raw_sentence) > 0:
                 # Otherwise, call review_to_wordlist to get a list of words
-                sentences.append( KaggleWord2VecUtility.review_to_wordlist( raw_sentence, \
-                  remove_stopwords, remove_numbers))
+                sentences.append(Utility.review_to_wordlist(raw_sentence, \
+                                                            remove_stopwords, remove_numbers))
         #
         # Return the list of sentences (each sentence is a list of words,
         # so this returns a list of lists
