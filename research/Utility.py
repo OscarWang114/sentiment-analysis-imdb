@@ -21,6 +21,17 @@ class KaggleWord2VecUtility(object):
         # 2.5 Optionally remove numbers
         if remove_numbers:
             review_text = re.sub("[0-9]", " ", review_text)
+        else:
+            review_text = review_text.replace('0', ' zero ')
+            review_text = review_text.replace('1', ' one ')
+            review_text = review_text.replace('2', ' two ')
+            review_text = review_text.replace('3', ' three ')
+            review_text = review_text.replace('4', ' four ')
+            review_text = review_text.replace('5', ' five ')
+            review_text = review_text.replace('6', ' six ')
+            review_text = review_text.replace('7', ' seven ')
+            review_text = review_text.replace('8', ' eight ')
+            review_text = review_text.replace('9', ' nine ')
         #
         # 3. Convert words to lower case and split them
         words = review_text.lower().split()
