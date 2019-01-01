@@ -2,10 +2,12 @@
 
 ## Scores
 
-Model | Details | Score 
---- | --- | ---
-Bag of Words (tutorial) | Remove stop words. Random Forest. | 0.84644
-Word2Vec Avg Vectors(tutorial) | Preserve stop words, numbers. Random Forest | 0.83104
+Word Embedding | Learning Method | Details | Score 
+--- | --- | --- | ---
+Bag of Words | Random Forest | Tutorial. Remove stop words, numbers. | 0.84644
+Word2Vec skip-gram| Random Forest | Tutorial. Preserve stop words, numbers. Avg Vectors.| 0.83104
+FastText skip-gram| Random Forest | Preserve stop words, numbers. Avg Vectors. | 0.83688
+
 
 ## Things to think about
 ### Text Preprocessing
