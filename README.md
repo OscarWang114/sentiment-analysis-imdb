@@ -18,6 +18,7 @@ Removing stop words? (Discouraged by Kaggle)
 
 ### Model
 Ensemble Learning? Combining SVN, Random Forest with RNN and average them (paper needed)
+LSTM
 
 ### Visualization
 T-SNE
