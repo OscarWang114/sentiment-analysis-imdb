@@ -87,11 +87,11 @@ def getCleanReviews(reviews):
 if __name__ == '__main__':
 
     # Read data from files
-    train = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', 'labeledTrainData.tsv'), header=0,
+    train = pd.read_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', 'labeledTrainData.tsv'), header=0,
                         delimiter="\t", quoting=3)
-    test = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', 'testData.tsv'), header=0, delimiter="\t",
+    test = pd.read_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', 'testData.tsv'), header=0, delimiter="\t",
                        quoting=3)
-    unlabeled_train = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', "unlabeledTrainData.tsv"), header=0,
+    unlabeled_train = pd.read_csv(os.path.join(os.path.dirname(__file__), '../', 'data-set', "unlabeledTrainData.tsv"), header=0,
                                   delimiter="\t", quoting=3)
 
     # Verify the number of reviews that were read (100,000 in total)
@@ -173,5 +173,5 @@ if __name__ == '__main__':
 
     # Write the test results
     output = pd.DataFrame(data={"id": test["id"], "sentiment": result})
-    output.to_csv("Word2Vec_AverageVectors.csv", index=False, quoting=3)
+    output.to_csv(os.path.join(os.path.dirname(__file__), '../', 'output', "Word2Vec_AverageVectors.csv"), index=False, quoting=3)
     print "Wrote Word2Vec_AverageVectors.csv"
