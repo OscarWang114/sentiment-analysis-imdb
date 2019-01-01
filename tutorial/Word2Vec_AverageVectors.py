@@ -108,11 +108,11 @@ if __name__ == '__main__':
 
     print "Parsing sentences from training set"
     for review in train["review"]:
-        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer)
+        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer, remove_numbers=False)
 
     print "Parsing sentences from unlabeled set"
     for review in unlabeled_train["review"]:
-        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer)
+        sentences += KaggleWord2VecUtility.review_to_sentences(review, tokenizer, remove_numbers=False)
 
     # ****** Set parameters and train the word2vec model
     #
