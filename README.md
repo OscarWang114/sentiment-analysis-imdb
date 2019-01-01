@@ -11,3 +11,7 @@ Word2Vec Avg Vectors(tutorial) | Preserve stop words, numbers. Random Forest | 0
 ### Text Preprocessing
 Canonicalization? (I've -> I have)
 Lemmatization?
+Removing stop words? (Discouraged by Kaggle)
+
+### Model
+Ensemble Learning? Combining SVN, Random Forest with RNN and average them (paper needed)
