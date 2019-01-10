@@ -3,7 +3,7 @@
 ## Learning Methods
 ### Averaging Vectors + Random Forest
 Word Embedding | Details | Score
---- | --- | --- | ---
+--- | --- | ---
 Bag of Words | Tutorial. Remove stop words, numbers. | 0.84644
 Word2Vec skip-gram | Tutorial. Spell out digits 0-9. | 0.83104
 FastText skip-gram | Spell out digits 0-9. | 0.83688
