@@ -29,6 +29,7 @@ Word Embedding | CNN num_filters | CNN kernel_size | LSTM Unit | Epoch | Details
 --- | --- | --- | --- | --- | --- | ---
 Word2Vec skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.89948
 FastText skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.90132
+FastText skip-gram | 64 | 2 | 32 | 10 | Spell out digits 0-9. Supervised on pretrained vectors cc.en.300. | 0.90176
 
 
 ## Things to think about
