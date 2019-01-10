@@ -22,6 +22,11 @@ Word2Vec skip-gram | 100 | 0.2 | 10 | Spell out digits 0-9. | 0.8918
 Word2Vec skip-gram | 32 | 0.2 | 6 |  Spell out digits 0-9. | 0.8802
 
 
+#### CNN + BiLSTM
+Word Embedding | CNN num_filters | CNN kernel_size | LSTM Unit | Epoch | Details | Score
+--- | --- | --- | --- | --- | --- | ---
+Word2Vec skip-gram | 64 | 2 | 100 | 6 | Spell out digits 0-9. | 0.89948
+
 ## Things to think about
 ### Text Preprocessing
 Canonicalization? (I've -> I have)
