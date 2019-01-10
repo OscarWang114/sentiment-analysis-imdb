@@ -14,6 +14,8 @@ FastText skip-gram | Spell out digits 0-9. Supervised on pretrained wiki-news-30
 FastText skip-gram | Spell out digits 0-9. Directly uses pretrained vectors cc.en.300. | 0.7582
 FastText cbow | Preserve stop words, numbers. | 0.80956
 
+"Supervised on pretrained vectors" means initialize the model with pretrained vectors and train it on the data set.
+
 ### RNN
 #### BiLSTM
 Word Embedding | Unit | Dropout | Epoch | Details | Score
