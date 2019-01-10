@@ -14,12 +14,11 @@ FastText skip-gram | Spell out digits 0-9. Directly uses pretrained vectors cc.e
 FastText cbow | Preserve stop words, numbers. | 0.80956
 
 ### RNN
-#### Word Embedding: Word2Vec skip-gram. Spell out digits 0-9.
-
-Method | Unit | Dropout | Epoch | Score
---- | --- | --- | --- | ---
-BiLSTM | 100 | 0.2 | 10 | 0.8918
-BiLSTM | 32 | 0.2 | 6 | 0.8802
+#### BiLSTM
+Word Embedding | Unit | Dropout | Epoch | Details | Score
+--- | --- | --- | --- | --- | ---
+Word2Vec skip-gram | 100 | 0.2 | 10 | Spell out digits 0-9. | 0.8918
+Word2Vec skip-gram | 32 | 0.2 | 6 |  Spell out digits 0-9. | 0.8802
 
 
 ## Things to think about
