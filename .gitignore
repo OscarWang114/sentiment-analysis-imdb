@@ -5,3 +5,5 @@ output/
 *.bin
 *.vec
 wikifil.pl
+unneeded/
+.ipynb_checkpoints/
