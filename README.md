@@ -34,18 +34,3 @@ Word Embedding | CNN num_filters | CNN kernel_size | LSTM Unit | Epoch | Details
 --- | --- | --- | --- | --- | --- | ---
 Word2Vec skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.89948
 FastText skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.90132
-
-
-## Things to think about
-### Text Preprocessing
-Canonicalization? (I've -> I have)
-Lemmatization?
-Removing stop words? (Discouraged by Kaggle)
-
-### Model
-Ensemble Learning? Combining SVN, Random Forest with RNN and average them (paper needed)
-LSTM
-
-### Visualization
-T-SNE
-WordCloud
