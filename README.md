@@ -17,11 +17,16 @@ FastText cbow | Preserve stop words, numbers. | 0.80956
 "Supervised on pretrained vectors" means initialize the model with pretrained vectors and train it on the data set.
 
 ### RNN
+
+#### LSTM
+Word Embedding | Unit | Dropout | Epoch | Details | Score
+--- | --- | --- | --- | --- | ---
+Word2Vec skip-gram | 32 | 0.2 | 6 |  Spell out digits 0-9. | 0.87232
+
 #### BiLSTM
 Word Embedding | Unit | Dropout | Epoch | Details | Score
 --- | --- | --- | --- | --- | ---
-Word2Vec skip-gram | 100 | 0.2 | 10 | Spell out digits 0-9. | 0.8918
-Word2Vec skip-gram | 32 | 0.2 | 6 |  Spell out digits 0-9. | 0.8802
+Word2Vec skip-gram | 32 each direction | 0.2 | 6 |  Spell out digits 0-9. | 0.88024
 
 
 #### CNN + BiLSTM
@@ -29,7 +34,6 @@ Word Embedding | CNN num_filters | CNN kernel_size | LSTM Unit | Epoch | Details
 --- | --- | --- | --- | --- | --- | ---
 Word2Vec skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.89948
 FastText skip-gram | 64 | 2 | 32 | 6 | Spell out digits 0-9. | 0.90132
-FastText skip-gram | 64 | 2 | 32 | 10 | Spell out digits 0-9. Supervised on pretrained vectors cc.en.300. | 0.90176
 
 
 ## Things to think about
